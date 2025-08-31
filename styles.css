@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+:root {
+    --bege-background: #F4E9DC;
+    --branco-background: #FFF8F0;
+    --cor-fonte: #4B2E2A;
+    --laranja-button: #FF8214;
+    --green-color: #556B2F;
+    --red-color: #A75757;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter';
+    background-color: #F4E9DC;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: var(--bege-background);
+    width: 100%;
+    box-shadow: 0px 8px 19px 4px rgba(49, 49, 49, 0.89);
+}
+
+.container h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    color: var(--cor-fonte);
+    font-size: 35px;
+}
+
+.container_navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.container_lista{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--cor-fonte);
+    font-size: 25px;
+}
+
+.container_lista:hover{
+    color: var(--laranja-button);
+    border-bottom: 2px solid var(--laranja-button);
+}
+
+.container_image{
+    position: relative; 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 60px;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    
+}
+
+.imagem-de-fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 0.7; 
+    z-index: -1; 
+}
+
+.image_text{
+    color: white;
+    font-size: 40px;
+}
+
+.imagens_agrupadas{
+    position: relative;
+    width: 350px;
+    height: 400px;
+}
+
+.imagem_secundaria{
+    position: absolute; 
+    width: 250px; 
+    background-color: #f72525; 
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4);   
+}
+
+.imagem_secundaria:nth-child(1) {
+    height: 300px;
+    top: 50px;
+    right: 150px;
+    transform: rotate(5deg);
+    border: 6px solid white;
+    border-bottom: 50px solid white;
+    background-clip: content-box;
+    z-index: 2; 
+}
+
+.imagem_secundaria img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
+    border-radius: 2px;
+    object-position: bottom;
+}
+.imagem_secundaria:nth-child(2) {
+   height: 300px;
+    bottom: 50px;
+    right: 30%;
+    transform: rotate(-5deg);
+    border: 6px solid white;
+    border-bottom: 50px solid white;
+    background-clip: content-box;
+    z-index: 1; 
+}
+
+.legenda-polaroid{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.container_button_lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 35px;
+}
+
+.container_button_lista h1{
+    font-size: 40px;
+    color: var(--cor-fonte);
+}
+.button_container{
+    margin: 20px;
+}
+
+.button_style{
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+
+.button_style:hover{
+    background-color: var(--laranja-button);
+    border: 2px solid #df5349;
+    color: var(--branco-background);
+}
+
+.instagram_link{
+    padding: 10px;
+    font-size: 30px; /* Aumenta o tamanho do ícone */
+    border: none;
+    background-color: var(--bege-background);
+    cursor: pointer;
+}
+
+.instagram_link:hover{
+    background-color: #df5349;
+    color: var(--branco-background);
+    border-radius: 50%;
+}
+
+.box_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem,1fr));
+    gap: 1.5rem;
+    margin: 20px;
+    
+}
+
+.box{
+    box-shadow: 1px 5px 15px 0px rgba(0,0,0,0.88);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.box img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+    object-position: bottom;
+
+}
+
+.box_items{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 20px;
+    
+}
+
+.box_items span{
+    color: var(--red-color);
+    font-weight: 700;
+    
+}
+.box_container img{
+    width: 100%;
+}
+
+.nossa_historia{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: var(--branco-background);
+    width: 100%;
+    height: 400px;
+    background-color: #556B2F;
+    gap: 40px;
+}
+
+.nossa_historia h1{
+    font-size: 54px;
+    font-weight: 600;
+}
+
+.nossa_historia p{
+    font-size: 20px;
+}
+
+.nossa_historia button{
+    border: none;
+    padding: 20px 40px;
+    border-radius: 10px;
+}

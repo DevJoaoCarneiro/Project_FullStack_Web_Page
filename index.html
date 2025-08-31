@@ -25,9 +25,10 @@
                 </ul>
             </div>
 
-            <button class="instagram_link">
+            <a class="instagram_link" href="https://www.instagram.com/phinabakery" target="_blank">
                 <span><i class="fa-brands fa-instagram"></i></span>
-            </button>
+            </a>
+
         </div>
     </header>
 
@@ -39,7 +40,7 @@
                 <p>Um lugar para sentir-se em casa.</p>
             </div>
 
-            <div class="imagens_agrudapas">
+            <div class="imagens_agrupadas">
                 <div class="imagem_secundaria">
                     <img src="img/Plate.jpg" alt="Prato de Macarrao">
                     <p class="legenda-polaroid">Feito com AMOR</p>
@@ -56,59 +57,17 @@
     <section class="menu_container">
         <div class="container_button_lista">
             <h1>Menu</h1>
-            <div class="button_container">
-                <button class="button_style">Brunch</button>
-                <button class="button_style">Bebidas Geladas</button>
-                <button class="button_style">Bebidas Quentes</button>
-                <button class="button_style">Soft Drinks</button>
-                <button class="button_style">Sobremesas</button>
+            <div id="menu-filters" class="button_container">
+                <button class="button_style active" data-category="all">Todos</button>
+                <button class="button_style" data-category="brunch">Brunch</button>
+                <button class="button_style" data-category="bebidas-geladas">Bebidas Geladas</button>
+                <button class="button_style" data-category="bebidas-geladas">Bebidas Quentes</button>
+                <button class="button_style" data-category="soft-drinks">Soft Drinks</button>
+                <button class="button_style" data-category="sobremesas">Sobremesas</button>
             </div>
         </div>
 
-        <div class="box_container">
-            <div class="box">
-                <img src="img/brunch1.jpg" alt="Toast Guava">
-                <div class="box_items">
-                    <h3>Brunch Guava</h3>
-                    <p>Ovo pochet, salada ceaser e um antepasto de beringela</p>
-                    <span>$15.99</span>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="img/brunch1.jpg" alt="Toast Guava">
-                <div class="box_items">
-                    <h3>Brunch Guava</h3>
-                    <p>Ovo pochet, salada ceaser e um antepasto de beringela</p>
-                    <span>$15.99</span>
-                </div>
-            </div>
-            <div class="box">
-                <img src="img/brunch1.jpg" alt="Toast Guava">
-                <div class="box_items">
-                    <h3>Brunch Guava</h3>
-                    <p>Ovo pochet, salada ceaser e um antepasto de beringela</p>
-                    <span>$15.99</span>
-                </div>
-            </div>
-            <div class="box">
-                <img src="img/brunch1.jpg" alt="Toast Guava">
-                <div class="box_items">
-                    <h3>Brunch Guava</h3>
-                    <p>Ovo pochet, salada ceaser e um antepasto de beringela</p>
-                    <span>$15.99</span>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="img/brunch1.jpg" alt="Toast Guava">
-                <div class="box_items">
-                <h3>Brunch Guava</h3>
-                <p>Ovo pochet, salada ceaser e um antepasto de beringela</p>
-                <span>$15.99</span>
-                </div>
-            </div>
-
+        <div id="menu-grid" class="box_container">
 
         </div>
     </section>
@@ -116,10 +75,24 @@
     <section>
         <div class="nossa_historia">
             <h1>Nossa Historia</h1>
-            <p>A Phina Bakery nasceu em meio à pandemia, como um refúgio de afeto <br> e sabor. Especializada em pães de fermentação natural, cada fornada é feita com tempo, cuidado e muito<br> amor. O que começou como um sonho caseiro, hoje alimenta corações com autenticidade e carinho</p>
-            <button>Saiba Mais</button>
+            <p>A Phina Bakery nasceu em meio à pandemia, como um refúgio de afeto e sabor. Especializada em pães de
+                fermentação natural, cada fornada é feita com tempo, cuidado e muito amor. O que começou como um sonho
+                caseiro, hoje alimenta corações com autenticidade e carinho</p>
+            <button class="nossa_historia_button">Saiba Mais</button>
         </div>
     </section>
+    <script src="menu.js"></script>
 </body>
+
+<footer>
+
+    <div class="footer_navbar">
+        <h4>
+            Menu Phina bakery
+        </h4>
+        <h4>Versao 1.0</h4>
+    </div>
+
+</footer>
 
 </html>

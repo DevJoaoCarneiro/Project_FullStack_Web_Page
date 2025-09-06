@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'bebidas-geladas'
         },
         {
-            image: 'img/Brunch3.jpg', 
+            image: 'img/brunch3.jpg', 
             name: 'Croissant com Ovos e Bacon',
             description: 'ECroissant recheado com ovos mexidos, fatias de bacon e queijo',
             price: 12.00,

@@ -9,32 +9,49 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'brunch'
         },
         {
-            image: 'img/brunch1.jpg', // Exemplo: troque pelo caminho correto
-            name: 'Avocado Toast',
-            description: 'Pão artesanal, abacate fresco, ovos e temperos especiais.',
+            image: 'img/brunch2.jpg', 
+            name: 'Torrada com Abacate e Bacon',
+            description: 'Fatia de pão tostado coberta com abacate, ovo frito e fatias de bacon crocante.',
             price: 18.50,
             category: 'brunch'
         },
         {
-            image: 'img/brunch1.jpg', // Exemplo: troque pelo caminho correto
-            name: 'Iced Coffee',
-            description: 'Café especial extraído a frio, servido com gelo.',
+            image: 'img/Plate.jpg', 
+            name: 'Massa com Burrata',
+            description: 'Massa tipo rigatoni ao molho de tomate, finalizada com burrata cremosa e folhas de manjericão.',
             price: 14.00,
             category: 'bebidas-geladas'
         },
         {
-            image: 'img/brunch1.jpg', // Exemplo: troque pelo caminho correto
-            name: 'Cappuccino Italiano',
-            description: 'Expresso, leite vaporizado e uma cremosa espuma de leite.',
+            image: 'img/brunch3.jpg', 
+            name: 'Croissant com Ovos e Bacon',
+            description: 'ECroissant recheado com ovos mexidos, fatias de bacon e queijo',
             price: 12.00,
             category: 'bebidas-quentes'
         },
         {
-            image: 'img/brunch1.jpg', // Exemplo: troque pelo caminho correto
-            name: 'Cheesecake de Frutas Vermelhas',
-            description: 'Fatia generosa de cheesecake com calda artesanal.',
+            image: 'img/Danish.jpg', 
+            name: 'Trança Folhada com Frutas',
+            description: 'Massa folhada com creme e cobertura de morangos e mirtilos.',
             price: 22.00,
             category: 'sobremesas'
+  
+        },
+        {
+            image: 'img/capuccino.jpg', 
+            name: 'Cappuccino Italiano',
+            description: 'Espresso duplo e leite vaporizado',
+            price: 22.00,
+            category: 'bebidas-quentes'
+  
+        },
+        {
+            image: 'img/coffeIced.jpg', 
+            name: 'Iced Latte Classico',
+            description: 'Bebida para os puristas. Espresso e leite e gelo',
+            price: 22.00,
+            category: 'bebidas-geladas'
+  
         },
 
     ];

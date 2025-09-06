@@ -183,7 +183,6 @@ body {
     cursor: pointer;
 }
 
-
 .instagram_link:hover {
     background-color: #df5349;
     color: var(--branco-background);
@@ -214,7 +213,7 @@ body {
     height: 350px;
     object-fit: cover;
     border-radius: 16px 16px 0 0;
-    object-position: bottom;
+    object-position: center;
 
 }
 
@@ -265,13 +264,13 @@ body {
     cursor: pointer;
 }
 
-.nossa_historia_button:hover{
+.nossa_historia_button:hover {
     background-color: #6f8a42;
     border: #556B2F;
     color: var(--branco-background);
 }
 
-.imagem_secundaria_footer:nth-child(2){
+.imagem_secundaria_footer:nth-child(2) {
     height: 300px;
     width: 400px;
     right: 180px;
@@ -281,17 +280,158 @@ body {
     z-index: 2;
 }
 
+.historia_container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 170px;
+}
+
+.imagens_bottom_1,
+.imagens_bottom_2 {
+    position: absolute;
+    width: 580px;
+    border: 15px solid white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.imagens_bottom_1 {
+    top: 270px;
+    left: 10%;
+    transform: rotate(-8deg);
+}
+
+.imagens_bottom_2 {
+    top: 280px;
+    right: 10%;
+    transform: rotate(8deg);
+}
+
+.historia-texto-central h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    color: var(--cor-fonte);
+    text-align: center;
+    line-height: 1.2;
+    margin: 40px;
+}
 
 #menu-filters .button_style.active {
     background-color: var(--laranja-button);
     color: white;
 }
 
-.footer_navbar{
+.footer_navbar {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    align-items: center;
+    background-color: var(--red-color);
+    color: var(--branco-background);
+    padding: 30px 40px;
 }
+
+.footer_navbar>div {
+    flex: 1;
+}
+
+.footer_navbar>div:nth-child(2) {
+    text-align: center;
+}
+
+.footer_navbar>div:nth-child(3) {
+    text-align: right;
+}
+
+.footer_navbar h1 {
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 200;
+    margin: 0 0 5px 0;
+}
+
+.navbar_bottom {
+    color: var(--branco-background);
+    background-color: var(--red-color);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.phina_hashtag{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.painel_Adm {
+    text-decoration: none;
+    color: var(--branco-background);
+    border: 2px solid var(--branco-background);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.painel_Adm:hover {
+    background-color: var(--laranja-button);
+    border: 2px solid #df5349;
+}
+
+.horario_atendimento {
+    display: flex;
+    padding: 60px;
+}
+
+.horario_atendimento_imagem {
+    width: 30%;
+    border: 4px solid var(--branco-background);
+}
+
+.text_horario {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 80px;
+    gap: 40px;
+}
+
+.text_horario {
+    font-size: 26px;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--cor-fonte);
+}
+
+.Titulo_horario {
+    margin: 20px 0px;
+}
+
+.Titulo_horario h1 {
+    font-size: 70px;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--cor-fonte);
+}
+
+.Titulo_horario p {
+    font-size: 20px;
+    color: var(--cor-fonte);
+}
+
+.button_bottom {
+    padding: 20px 40px;
+    background-color: var(--bege-background);
+    border-radius: 10px;
+    border: 2px solid var(--cor-fonte);
+    cursor: pointer;
+}
+
+.button_bottom:hover {
+    background-color: var(--laranja-button);
+    border: 2px solid #df5349;
+    color: var(--branco-background);
+}
+
 
 @media (max-width: 1400px) {
     .imagens_agrupadas {
@@ -309,6 +449,23 @@ body {
         text-align: center;
     }
 
+    .imagens_bottom_1 {
+        top: 370px;
+        left: 10%;
+        transform: rotate(-8deg);
+    }
+
+
+    .historia-texto-central{
+        display: none;
+    }
+
+    .imagens_bottom_2 {
+        top: 380px;
+        right: 10%;
+        transform: rotate(8deg);
+    }
+    
 
     .container_lista {
         font-size: 15px;
@@ -317,6 +474,10 @@ body {
     }
 
     .instagram_link {
+        display: none;
+    }
+
+    .horario_atendimento_imagem {
         display: none;
     }
 
@@ -337,21 +498,127 @@ body {
         margin: 0px;
         border-radius: 10px;
         border: none;
-        
+        text-decoration: none;
+        color: var(--cor-fonte);
     }
 
-    .container_button_lista{
+    .container_button_lista {
         margin: 10px;
     }
-    
-    
 
-    .nossa_historia h1{
+    .text_horario {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px;
+        gap: 20px;
+    }
+
+    .nossa_historia h1 {
+        font-weight: 600;
         font-size: 30px;
     }
 
-    .nossa_historia p{
-        font-size: 15px;
+    .nossa_historia p {
         margin: 0px 80px;
+    }
+
+    .nossa_historia_imagem img {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 767px) {
+
+
+    .container_navbar {
+        gap: 20px;
+    }
+
+    .button_style{
+        text-decoration: none;
+    }
+
+    .container_lista {
+        font-size: 18px;
+    }
+
+    .nossa_historia_button{
+        visibility: hidden;
+    }
+    
+    .phina_hashtag{
+        display: none;
+    }
+
+    .imagens_bottom_1 {
+        top: 500px;
+        left: 10%;
+        transform: rotate(-8deg);
+    }
+
+    .imagens_bottom_2 {
+        top: 280px;
+        right: 10%;
+        transform: rotate(8deg);
+    }
+    
+    
+    .historia-texto-central{
+        visibility: hidden;
+    }
+
+    .nossa_historia p {
+        margin: 0 20px;
+        font-size: 16px;
+    }
+
+    .historia-texto-central h2 {
+        font-size: 32px;
+    }
+
+
+    .horario_atendimento {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    .text_horario {
+        margin: 40px 0 0 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .Titulo_horario h1 {
+        font-size: 48px;
+    }
+
+    .text_horario h3,
+    .text_horario p {
+        font-size: 18px;
+    }
+
+
+    .footer_navbar {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+        text-align: center !important;
+    }
+
+    .footer_navbar>div {
+
+        text-align: center !important;
+    }
+
+    .footer_navbar h1 {
+        font-size: 32px;
+    }
+
+    .footer_navbar p {
+        font-size: 12px;/
     }
 }

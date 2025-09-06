@@ -16,13 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'brunch'
         },
         {
-            image: 'img/Plate.jpg', 
-            name: 'Massa com Burrata',
-            description: 'Massa tipo rigatoni ao molho de tomate, finalizada com burrata cremosa e folhas de manjericão.',
-            price: 14.00,
-            category: 'bebidas-geladas'
-        },
-        {
             image: 'img/brunch3.jpg', 
             name: 'Croissant com Ovos e Bacon',
             description: 'ECroissant recheado com ovos mexidos, fatias de bacon e queijo',

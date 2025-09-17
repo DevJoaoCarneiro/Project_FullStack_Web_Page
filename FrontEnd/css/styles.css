@@ -1,0 +1,648 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(50px); 
+  transition: all 1s ease-out; 
+}
+
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+:root {
+    --bege-background: #F4E9DC;
+    --branco-background: #FFF8F0;
+    --cor-fonte: #4B2E2A;
+    --laranja-button: #FF8214;
+    --green-color: #556B2F;
+    --red-color: #A75757;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter';
+    background-color: #F4E9DC;
+}
+
+
+
+.container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--bege-background);
+    width: 100%;
+    box-shadow: 0px 8px 19px 4px rgba(49, 49, 49, 0.89);
+}
+
+.container h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    color: var(--cor-fonte);
+    font-size: 35px;
+}
+
+.container_navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.container_lista {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--cor-fonte);
+    font-size: 25px;
+}
+
+.container_lista:hover {
+    color: var(--laranja-button);
+    border-bottom: 2px solid var(--laranja-button);
+}
+
+.container_image {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 60px;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+
+}
+
+.imagem-de-fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.image_text {
+    color: white;
+    font-size: 40px;
+}
+
+
+.imagem_secundaria {
+    position: absolute;
+    width: 250px;
+    background-color: #f72525;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.imagem_secundaria:nth-child(1) {
+    height: 300px;
+    top: 50px;
+    right: 150px;
+    transform: rotate(5deg);
+    border: 6px solid white;
+    border-bottom: 50px solid white;
+    background-clip: content-box;
+    z-index: 2;
+}
+
+.imagem_secundaria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 2px;
+    object-position: bottom;
+}
+
+.imagem_secundaria:nth-child(2) {
+    height: 300px;
+    bottom: 50px;
+    right: 30%;
+    transform: rotate(-5deg);
+    border: 6px solid white;
+    border-bottom: 50px solid white;
+    background-clip: content-box;
+    z-index: 1;
+}
+
+.legenda-polaroid {
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.container_button_lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 35px;
+}
+
+.container_button_lista h1 {
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: var(--cor-fonte);
+}
+
+.button_container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button_style {
+    padding: 20px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+
+.button_style:hover {
+    background-color: var(--laranja-button);
+    border: 2px solid #df5349;
+    color: var(--branco-background);
+}
+
+.instagram_link {
+    padding: 10px;
+    font-size: 30px;
+    border: none;
+    background-color: var(--bege-background);
+    cursor: pointer;
+}
+
+.instagram_link:hover {
+    background-color: #df5349;
+    color: var(--branco-background);
+    border-radius: 50%;
+}
+
+.box_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 20px;
+
+}
+
+.box {
+    box-shadow: 1px 5px 15px 0px rgba(0, 0, 0, 0.88);
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+    object-position: center;
+
+}
+
+.box_items {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 20px;
+
+}
+
+.box_items span {
+    color: var(--red-color);
+    font-weight: 700;
+}
+
+.box_container img {
+    width: 100%;
+}
+
+.nossa_historia {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--green-color);
+    color: var(--branco-background);
+    width: 100%;
+    height: 400px;
+    gap: 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.nossa_historia h1 {
+    font-size: 54px;
+    font-weight: 600;
+}
+
+.nossa_historia p {
+    font-size: 20px;
+    margin: 0px 400px;
+}
+
+.nossa_historia_button {
+    border: none;
+    padding: 20px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.nossa_historia_button:hover {
+    background-color: #6f8a42;
+    border: #556B2F;
+    color: var(--branco-background);
+}
+
+.imagem_secundaria_footer:nth-child(2) {
+    height: 300px;
+    width: 400px;
+    right: 180px;
+    border: 6px solid white;
+    border-bottom: 50px solid white;
+    background-clip: content-box;
+    z-index: 2;
+}
+
+.historia_container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 170px;
+}
+
+.imagens_bottom_1,
+.imagens_bottom_2 {
+    position: absolute;
+    width: 480px;
+    border: 15px solid white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.imagens_bottom_1 {
+    top: 300px;
+    left: 5%;
+    transform: rotate(-8deg);
+}
+
+.imagens_bottom_2 {
+    top: 400px;
+    right: 5%;
+    transform: rotate(8deg);
+}
+
+.historia-texto-central h2 {
+
+    font-size: 48px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cor-fonte);
+    text-align: center;
+    line-height: 1.2;
+    margin: 40px;
+}
+
+#menu-filters .button_style.active {
+    background-color: var(--laranja-button);
+    color: white;
+}
+
+.footer_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--red-color);
+    color: var(--branco-background);
+    padding: 30px 40px;
+
+}
+
+.footer_navbar>div {
+    flex: 1;
+}
+
+.footer_navbar>div:nth-child(2) {
+    text-align: center;
+}
+
+.footer_navbar>div:nth-child(3) {
+    text-align: right;
+}
+
+.footer_navbar h1 {
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 200;
+    margin: 0 0 5px 0;
+}
+
+.navbar_bottom {
+    color: var(--branco-background);
+    background-color: var(--red-color);
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.phina_hashtag {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.painel_Adm {
+    text-decoration: none;
+    color: var(--branco-background);
+    border: 2px solid var(--branco-background);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.painel_Adm:hover {
+    background-color: var(--laranja-button);
+    border: 2px solid #df5349;
+}
+
+.horario_atendimento {
+    display: flex;
+    padding: 60px;
+}
+
+.horario_atendimento_imagem {
+    width: 30%;
+    border: 4px solid var(--branco-background);
+    border-radius: 20px;
+}
+
+.text_horario {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 80px;
+    gap: 40px;
+}
+
+.text_horario {
+    font-size: 26px;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--cor-fonte);
+}
+
+.Titulo_horario {
+    margin: 20px 0px;
+}
+
+.Titulo_horario h1 {
+    font-size: 70px;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--cor-fonte);
+}
+
+.Titulo_horario p {
+    font-size: 20px;
+    color: var(--cor-fonte);
+}
+
+.button_bottom {
+    padding: 20px 40px;
+    background-color: var(--bege-background);
+    border-radius: 10px;
+    border: 2px solid var(--cor-fonte);
+    cursor: pointer;
+}
+
+.button_bottom:hover {
+    background-color: var(--laranja-button);
+    border: 2px solid #df5349;
+    color: var(--branco-background);
+}
+
+
+@media (max-width: 1550px) {
+    .imagens_agrupadas {
+        display: none;
+    }
+
+    .container h1 {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .imagens_bottom_1 {
+        top: 370px;
+        left: 10%;
+        transform: rotate(-8deg);
+    }
+
+
+    .historia-texto-central {
+        display: none;
+    }
+
+    .imagens_bottom_2 {
+        top: 380px;
+        right: 10%;
+        transform: rotate(8deg);
+    }
+
+
+    .container_lista {
+        font-size: 15px;
+        font-weight: 400;
+
+    }
+
+    .instagram_link {
+        display: none;
+    }
+
+    .horario_atendimento_imagem {
+        display: none;
+    }
+
+    .container_image {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 50vh;
+    }
+
+    .image_text {
+        font-size: 100%;
+    }
+
+    .button_style {
+        padding: 15px;
+        font-size: 10px;
+        margin: 0px;
+        border-radius: 10px;
+        border: none;
+        text-decoration: none;
+        color: var(--cor-fonte);
+    }
+
+    .container_button_lista {
+        margin: 10px;
+    }
+
+    .text_horario {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px;
+        gap: 20px;
+    }
+
+    .nossa_historia h1 {
+        font-weight: 600;
+        font-size: 30px;
+    }
+
+    .nossa_historia p {
+        margin: 0px 80px;
+    }
+
+    .nossa_historia_imagem img {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 767px) {
+
+
+    .container_navbar {
+        gap: 20px;
+    }
+
+    .button_style {
+        text-decoration: none;
+    }
+
+    .container_lista {
+        font-size: 18px;
+    }
+
+    .nossa_historia_button {
+        visibility: hidden;
+    }
+
+    .phina_hashtag {
+        display: none;
+    }
+
+    .imagens_bottom_1 {
+        top: 500px;
+        left: 10%;
+        transform: rotate(-8deg);
+    }
+
+    .imagens_bottom_2 {
+        top: 280px;
+        right: 10%;
+        transform: rotate(8deg);
+    }
+
+
+    .historia-texto-central {
+        visibility: hidden;
+    }
+
+    .nossa_historia p {
+        margin: 0 20px;
+        font-size: 16px;
+    }
+
+    .historia-texto-central h2 {
+        font-size: 32px;
+    }
+
+
+    .horario_atendimento {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    .text_horario {
+        margin: 40px 0 0 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .Titulo_horario h1 {
+        font-size: 48px;
+    }
+
+    .text_horario h3,
+    .text_horario p {
+        font-size: 18px;
+    }
+
+
+    .footer_navbar {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+        text-align: center !important;
+    }
+
+    .footer_navbar>div {
+
+        text-align: center !important;
+    }
+
+    .footer_navbar h1 {
+        font-size: 32px;
+    }
+
+    .footer_navbar p {
+        font-size: 12px;/
+    }
+}

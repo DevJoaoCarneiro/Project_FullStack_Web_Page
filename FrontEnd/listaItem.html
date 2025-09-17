@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/listaStyle.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>Cadastro Item</title>
+</head>
+
+<body>
+    <div>
+        <nav class="container">
+            <h1>Phina Bakery</h1>
+            <div class="botoes_centrais">
+                <div class="display_botoes_centrais">
+                    <a href="./cadastroItem.html" class="sidebar-botao">
+                        <span>
+                            <i class="fa-regular fa-file"></i>
+                        </span>
+                    </a>
+                    <span class="sidebar-texto">Adicionar Item</span> </a>
+                </div>
+                <div class="display_botoes_centrais">
+                    <a href="#" class="sidebar-botao">
+                        <span>
+                            <i class="fa-regular fa-folder-open"></i>
+                        </span>
+                    </a>
+                    <span class="sidebar-texto">Lista de Itens</span> </a>
+                </div>
+            </div>
+            <div class="botao_superior">
+                <span class="sidebar-texto">Logout</span> </a>
+                <a href="./index.html" class="sidebar-botao">
+                    <span>
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container_right">
+        <div class="titulo_container">
+            <h1>Phina Bakery</h1>
+            <h2>Lista de Itens</h2>
+        </div>
+        <div class="container_filter">
+            <input class="container_filter_input" type="text" placeholder="Produto" id="filtro-nome">
+            <select id="filtro-status" name="status" class="container_filter_input">
+
+                <option value="" disabled selected>Filtros</option>
+
+                <option value="Ativo">Ativo</option>
+                <option value="Inativo">Inativo</option>
+            </select>
+
+            <select id="filtro-categoria" name="categoria" class="container_filter_input">
+
+                <option value="" disabled selected>Categoria</option>
+
+                <option value="brunch">Brunch</option>
+                <option value="bebidas-quentes">Bebidas Quentes</option>
+                <option value="bebidas-geladas">Bebidas Geladas</option>
+                <option value="tortas">Soft Drinks</option>
+                <option value="soft-drinks">Sobremesas</option>
+
+            </select>
+            <button class="container_filter_buttom" id="botao-limpar-filtros">Limpar Filtros</button>
+        </div>
+
+        <div class="container_table">
+            <table class="tabela_itens">
+                <thead class="tabela_header">
+                    <tr>
+                        <th>Nome Produto</th>
+                        <th>Status</th>
+                        <th>Preço</th>
+                        <th>Categoria</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-produtos" class="container_itens">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="butoes_display">
+            <button class="button_opcoes excluir" id="botao_excluir">Excluir</button>
+            <button class="button_opcoes atualizar" id="botao_atualizar_status">Atualizar Status</button>
+            <button class="button_opcoes editar" id="botao_editar">Editar</button>
+        </div>
+    </div>
+
+    <script src="lista-admin.js" defer></script>
+</body>
+
+</html>

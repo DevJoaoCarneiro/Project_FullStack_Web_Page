@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Coffee Shop</title>
+</head>
+
+<body>
+
+    <header class="container">
+
+        <h1>Phina Bakery</h1>
+        <div class="main_nav">
+            <ul>
+                <li class="container_navbar">
+                    <a class="container_lista" href="#inicio">Inicio</a>
+                    <a class="container_lista" href="#menu">Menu</a>
+                    <a class="container_lista" href="#nossa_historia">Nossa Historia</a>
+                    <a class="container_lista" href="#sobre">Sobre</a>
+                </li>
+            </ul>
+        </div>
+
+        <a class="instagram_link" href="https://www.instagram.com/phinabakery" target="_blank">
+            <span><i class="fa-brands fa-instagram"></i></span>
+        </a>
+
+    </header>
+
+    <section id="inicio">
+        <div class="container_image">
+            <img class="imagem-de-fundo" src="img/coffeshop.jpg" alt="Cafeteria photo">
+            <div class="image_text">
+                <h1>Mais que uma padaria</h1>
+                <p>Um lugar para sentir-se em casa.</p>
+            </div>
+
+            <div class="imagens_agrupadas">
+                <div class="imagem_secundaria">
+                    <img src="img/Plate.jpg" alt="Prato de Macarrao">
+                    <p class="legenda-polaroid">Feito com AMOR</p>
+                </div>
+                <div class="imagem_secundaria">
+                    <img src="img/brunchCompleto.jpg" alt="Brunch Completo">
+                    <p class="legenda-polaroid">Feito para VOCÊ</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="menu_container" id="menu">
+        <div class="container_button_lista hidden">
+            <h1>MENU</h1>
+            <div id="menu-filters" class="button_container">
+                <button class="button_style active" data-category="all">Todos</button>
+                <button class="button_style" data-category="brunch">Brunch</button>
+                <button class="button_style" data-category="bebidas-geladas">Bebidas Geladas</button>
+                <button class="button_style" data-category="bebidas-quentes">Bebidas Quentes</button>
+                <button class="button_style" data-category="soft-drinks">Soft Drinks</button>
+                <button class="button_style" data-category="sobremesas">Sobremesas</button>
+            </div>
+        </div>
+
+        <div id="menu-grid" class="box_container hidden">
+
+        </div>
+    </section>
+
+    <section class="historia_container hidden" id="nossa_historia">
+        <div class="nossa_historia">
+            <h1>Nossa Historia</h1>
+            <p>A Phina Bakery nasceu em meio à pandemia, como um refúgio de afeto e sabor. Especializada em pães de
+                fermentação natural, cada fornada é feita com tempo, cuidado e muito amor. O que começou como um sonho
+                caseiro, hoje alimenta corações com autenticidade e carinho</p>
+            <button class="nossa_historia_button">Saiba Mais</button>
+        </div>
+        <div class="nossa_historia_imagem">
+            <img class="imagens_bottom_1 hidden" src="img/coffeshop.jpg" alt="ImagemAntes">
+            <div class="historia-texto-central">
+                <h2>Venha fazer<br>parte dessa<br>historia</h2>
+            </div>
+            <img class="imagens_bottom_2 hidden" src="img/phinaEquipe.jpg" alt="ImagemAtual">
+        </div>
+    </section>
+
+    <section>
+        <div class="navbar_bottom">
+            <div class="phina_hashtag">
+                <h4>#PhinaBakery</h4>
+                <h4>#PhinaBakery</h4>
+                <h4>#PhinaBakery</h4>
+                <h4>#PhinaBakery</h4>
+                <h4>#PhinaBakery</h4>
+                <h4>#PhinaBakery</h4>
+                <h4>#PhinaBakery</h4>
+            </div>
+
+        </div>
+
+        <div class="horario_atendimento hidden" id="sobre">
+
+            <img class="horario_atendimento_imagem" src="img/brunchCompleto.jpg" alt="Imagem bottom">
+
+
+            <div class="text_horario">
+                <div class="Titulo_horario">
+                    <h1>Phina Bakery</h1>
+                    <p>Horario de funcionamento</p>
+                </div>
+                <div>
+                    <h3>Segunda a Sabado 07:00 as 18:00</h3>
+                </div>
+                <h3>Sexta Pizzada 19:00 as 22:30</h3>
+
+                <button class="button_bottom">Fale com a gente</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <footer>
+
+            <div class="footer_navbar">
+                <div>
+                    <h4>Av. Herval, 1214 - Zona 7, Maringá - PR, 87030-090</h4>
+                    <h4>Av. Rebouças, 479 - Zona 10, Maringá - PR, 87030-410</h4>
+                </div>
+
+                <div>
+                    <h1>
+                        Phina Bakery
+                    </h1>
+                    <p>&copy; 2025 Phina Bakery. Todos os direitos reservados.</p>
+                </div>
+
+                <div>
+                    <a class="painel_Adm" href="login.html">Administrador</a>
+                </div>
+            </div>
+
+        </footer>
+    </section>
+    <script src="menu.js"></script>
+</body>
+
+
+
+</html>

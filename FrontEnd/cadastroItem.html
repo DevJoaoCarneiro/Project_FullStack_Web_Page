@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cadastroStyle.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>Cadastro Item</title>
+</head>
+
+<body>
+    <div>
+        <nav class="container">
+            <div class="botao_superior">
+                <h1>Phina Bakery</h1>
+            </div>
+            <div class="botoes_centrais">
+                <div class="display_botoes_centrais">
+                    <a href="./cadastroItem.html" class="sidebar-botao">
+                        <span>
+                            <i class="fa-regular fa-file"></i>
+                        </span>
+                    </a>
+                    <span class="sidebar-texto">Adicionar Item</span> </a>
+                </div>
+                <div class="display_botoes_centrais">
+                    <a href="./listaItem.html" class="sidebar-botao">
+                        <span>
+                            <i class="fa-regular fa-folder-open"></i>
+                        </span>
+                    </a>
+                    <span class="sidebar-texto">Lista de Itens</span> </a>
+                </div>
+            </div>
+            <div class="botao_superior">
+                <span class="sidebar-texto">Logout</span> </a>
+                <a href="./index.html" class="sidebar-botao">
+                    <span>
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </span>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <div class="input_container">
+
+        <form class="bloco" id="form_item">
+            <div class="form-coluna">
+                <h1 id="titulo_pagina" class="Titulo">Cadastro Produto</h1>
+                <label for="titulo">Titulo</label>
+                <input class="input_itens" type="text" id="name" placeholder="Insira o titulo...">
+                <label for="descricao">Descrição</label>
+                <input class="input_itens" type="text" id="descricao" placeholder="Insira a descrição...">
+                <label for="preço">Preço</label>
+                <input class="input_itens" type="number" min="0" step="0.01" required id="preco"
+                    placeholder="Insira o preço...">
+                <label for="categoria">Categoria</label>
+                <select id="categoria" name="categoria" class="input_itens">
+
+                    <option value="" disabled selected>Categoria</option>
+
+                    <option value="brunch">Brunch</option>
+                    <option value="bebidas-quentes">Bebidas Quentes</option>
+                    <option value="bebidas-geladas">Bebidas Geladas</option>
+                    <option value="tortas">Soft Drinks</option>
+                    <option value="soft-drinks">Sobremesas</option>
+
+                </select>
+            </div>
+
+            <div class="form-coluna_imagem">
+                <div class="container_imagens">
+                    <label for="imagem" class="upload-label">
+                        <i class="fa-solid fa-image" style="font-size: 50px;"></i>
+                        <span>Insira a imagem</span>
+                        <p>Formato ideal 1920x1080 min</p>
+                    </label>
+                    <input type="file" id="imagem" name="image" accept="image/*">
+                    <img id="preview-imagem" src="" alt="Pré-visualização da imagem">     
+                </div>
+                <button type="button" id="Botao_remove_imagem" class="botao_remover">Remover Imagem</button>
+            </div>
+            
+
+            <div class="botao_menu">
+                <button class="container_botao botao1" id="Limpar-Item">Limpar</button>
+                <button class="container_botao botao2" id="Adicionar-Item" type="submit">Adicionar</button>
+            </div>
+
+
+        </form>
+
+    </div>
+    <script src="./cadastro-item.js"></script>
+</body>
+
+</html>

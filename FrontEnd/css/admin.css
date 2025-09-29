@@ -15,7 +15,7 @@ body {
     width: 100vw;
     height: 100vh;
     font-family: 'Inter';
-    background-color: var(--bege-background);
+    background: linear-gradient(180deg,rgba(244, 233, 220, 1) 36%, rgba(167, 87, 87, 1) 100%);
 }
 
 
@@ -26,7 +26,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4);
 }
 
@@ -36,23 +35,31 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    padding: 80px 40px;
+    gap: 60px;
+    padding: 100px 40px;
     border-radius: 10px;
     box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4);
 
 }
 
-.container_login button {
+.input_contaiener{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.button_ref {
     padding: 10px 40px;
     border-radius: 5px;
     background-color: var(--laranja-button);
-    color: var(--branco-background);
+    border: 2px solid #d44604;
+    color: white;
     border: none;
     cursor: pointer;
+    text-decoration: none;
 }
 
-.container_login button:hover {
+.button_ref:hover {
     background-color: #f06829;
     color: var(--branco-background);
     border: 2px solid #d44604;

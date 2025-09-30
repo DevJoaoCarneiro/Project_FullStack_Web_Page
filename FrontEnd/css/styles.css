@@ -10,6 +10,9 @@ html {
     transition: all 1s ease-out;
 }
 
+.menu-card{
+    overflow: hidden;
+}
 
 .show {
     opacity: 1;
@@ -266,7 +269,8 @@ body {
     flex-direction: column;
     align-items: center;
     background-image: url('../img/Vector.png');
-    background-size: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     color: var(--branco-background);
     width: 100%;

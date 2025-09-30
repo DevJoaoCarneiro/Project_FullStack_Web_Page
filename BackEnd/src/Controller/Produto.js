@@ -4,9 +4,10 @@ import fs from 'fs/promises';
 //Criar Tabela
 export async function createTable() {
     const create = await openDb();
-    return create.exec(
+    await create.exec(
         'CREATE TABLE IF NOT EXISTS Produto ( id INTEGER PRIMARY KEY AUTOINCREMENT, image TEXT NOT NULL, name TEXT NOT NULL, descricao TEXT, preco REAL NOT NULL, categoria TEXT NOT NULL, status BOOLEAN)');
-
+    await create.exec(
+        'CREATE TABLE IF NOT EXISTS Usuario (id INTEGER PRIMARY KEY, username TEXT UNIQUE NOT NULL, password TEXT NOT NULL)');
 }
 
 //Inserir Produto
@@ -133,4 +134,13 @@ export async function filtrarProdutoStatus(queryParams) {
     }));
 
     return products;
+}
+
+export async function buscarUsuario(username) {
+    const db = await openDb();
+    try{
+    return db.get('SELECT * FROM Usuario Where username = ?', [username]);
+    }catch(err){
+        console.log("Erro ao achar o usuario..",err);
+    }
 }

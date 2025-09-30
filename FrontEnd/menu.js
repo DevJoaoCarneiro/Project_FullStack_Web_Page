@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.querySelectorAll('#menu-filters .button_style');
     const Api_HTTP = `http://localhost:3000`;
     let allMenuItems = [];
-    
+
 
     function displayMenuItems(items) {
         menuGrid.innerHTML = '';
@@ -16,12 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const imageUrl = `${Api_HTTP}${produto.image}`;
                 card.innerHTML = `
+                    <article class="menu-card"> 
                     <img src="${imageUrl}" alt="${produto.name}">
                     <div class="box_items">
                         <h3>${produto.name}</h3>
                         <p>${produto.descricao}</p>
                         <span>R$ ${produto.preco.toFixed(2).replace('.', ',')}</span>
                     </div>
+                    </article>
                 `;
 
                 menuGrid.appendChild(card);
@@ -31,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function carregarListaProduto() {
         try {
+            console.log("Entrei aqui");
             const response = await fetch(`http://localhost:3000/api/produto`);
 
             if (!response.ok) {

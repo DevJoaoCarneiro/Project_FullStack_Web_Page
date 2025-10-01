@@ -11,7 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function carregarProdutos(queryString = '') {
         try {
-            const response = await fetch(`http://localhost:3000/api/produto?${queryString}`);
+            const response = await fetch(`http://127.0.0.1:3000/api/produto?${queryString}`,{
+                credentials: 'include'
+            });
+
+            if (response.status === 401) {
+                alert('Acesso não autorizado. Por favor, faça o login.');
+                window.location.href = 'login.html';
+                return;
+            }
 
             if (!response.ok) {
                 throw new Error("Erro ao buscar produtos:" + response.statusText);
@@ -149,8 +157,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             try {
-                const response = await fetch(`http://localhost:3000/api/produto/${produtoId}`, {
-                    method: 'DELETE'
+                const response = await fetch(`http://127.0.0.1:3000/api/produto/${produtoId}`, {
+                    method: 'DELETE',
+                    credentials: 'include'
                 });
 
                 if (response.ok) {
@@ -178,8 +187,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const produtoId = linhaSelecionada.dataset.id;
 
             try {
-                const response = await fetch(`http://localhost:3000/api/produto/${produtoId}/status`, {
-                    method: 'PATCH'
+                const response = await fetch(`http://127.0.0.1:3000/api/produto/${produtoId}/status`, {
+                    method: 'PATCH',
+                    credentials: 'include'
                 });
 
                 if (response.ok) {

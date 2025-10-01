@@ -10,14 +10,21 @@
 
 <body>
     <section class="container">
-        <div class="container_login">
-            <h1>Phina Bakery</h1>
-            <input type="text" placeholder="Digite seu usuario...">
-            <input type="password" placeholder="Digite sua senha...">
-            
-            <button><a href="./cadastroItem.html">Entrar</a></button>
-        </div>
+        <form id="loginForm">
+            <div class="container_login">
+                <div>
+                    <h1>Phina Bakery</h1>
+                    <p>Área do Administrador</p>
+                </div>
+                <div class="input_contaiener">
+                    <input type="text" placeholder="Digite seu usuario..."  id="username" name="username" required>
+                    <input type="password" placeholder="Digite sua senha..." id="password" name="password" required>
+                </div>
+                <button type="submit" class="button_ref">Entrar</button>
+            </div>
+        </form>
     </section>
+    <script src="./login.js"></script>
 </body>
 
 </html>

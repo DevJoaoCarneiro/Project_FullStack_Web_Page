@@ -225,9 +225,6 @@ p {
         max-width: 90%;
     }
 
-    .container h1{
-        display: none;
-    }
     
     .sidebar-texto {
         display: flex;

@@ -1,83 +1,52 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const menuItems = [
-        {
-            image: 'img/brunch1.jpg',
-            name: 'Brunch Guava',
-            description: 'Ovo pochet, salada ceaser e um antepasto de beringela.',
-            price: 15.99,
-            category: 'brunch'
-        },
-        {
-            image: 'img/brunch2.jpg',
-            name: 'Torrada com Abacate e Bacon',
-            description: 'Fatia de pão tostado coberta com abacate, ovo frito e fatias de bacon crocante.',
-            price: 18.50,
-            category: 'brunch'
-        },
-        {
-            image: 'img/Plate.jpg',
-            name: 'Massa com Burrata',
-            description: 'Massa tipo rigatoni ao molho de tomate, finalizada com burrata cremosa e folhas de manjericão.',
-            price: 14.00,
-            category: 'bebidas-geladas'
-        },
-        {
-            image: 'img/Brunch3.jpg',
-            name: 'Croissant com Ovos e Bacon',
-            description: 'Croissant recheado com ovos mexidos, fatias de bacon e queijo',
-            price: 12.00,
-            category: 'bebidas-quentes'
-        },
-        {
-            image: 'img/Danish.jpg',
-            name: 'Trança Folhada com Frutas',
-            description: 'Massa folhada com creme e cobertura de morangos e mirtilos.',
-            price: 22.00,
-            category: 'sobremesas'
-
-        },
-        {
-            image: 'img/capuccino.jpg',
-            name: 'Cappuccino Italiano',
-            description: 'Espresso duplo e leite vaporizado',
-            price: 22.00,
-            category: 'bebidas-quentes'
-
-        },
-        {
-            image: 'img/coffeIced.jpg',
-            name: 'Iced Latte Classico',
-            description: 'Bebida para os puristas. Espresso e leite e gelo',
-            price: 22.00,
-            category: 'bebidas-geladas'
-
-        },
-
-    ];
-
     const menuGrid = document.getElementById('menu-grid');
     const filterButtons = document.querySelectorAll('#menu-filters .button_style');
-
+    const Api_HTTP = `http://localhost:3000`;
+    let allMenuItems = [];
 
 
     function displayMenuItems(items) {
         menuGrid.innerHTML = '';
 
-        items.forEach(item => {
-            const card = document.createElement('div');
-            card.className = 'box';
+        items.forEach(produto => {
+            if (produto.status === 'Ativo') {
+                const card = document.createElement('div');
+                card.className = 'box';
 
-            card.innerHTML = `
-                <img src="${item.image}" alt="${item.name}">
-                <div class="box_items">
-                    <h3>${item.name}</h3>
-                    <p>${item.description}</p>
-                    <span>R$ ${item.price.toFixed(2).replace('.', ',')}</span>
-                </div>
-            `;
-            menuGrid.appendChild(card);
+                const imageUrl = `${Api_HTTP}${produto.image}`;
+                card.innerHTML = `
+                    <article class="menu-card"> 
+                    <img src="${imageUrl}" alt="${produto.name}">
+                    <div class="box_items">
+                        <h3>${produto.name}</h3>
+                        <p>${produto.descricao}</p>
+                        <span>R$ ${produto.preco.toFixed(2).replace('.', ',')}</span>
+                    </div>
+                    </article>
+                `;
+
+                menuGrid.appendChild(card);
+            }
         });
+    }
+
+    async function carregarListaProduto() {
+        try {
+            console.log("Entrei aqui");
+            const response = await fetch(`http://localhost:3000/api/produto`);
+
+            if (!response.ok) {
+                throw new Error("Erro ao buscar produtos:" + response.statusText);
+            }
+
+            const data = await response.json();
+            allMenuItems = data.produtos;
+            displayMenuItems(allMenuItems);
+        } catch (error) {
+            console.error('Falha na requisição:', error);
+            menuGrid.innerHTML = '<p style="color: red; text-align: center;">Não foi possível carregar os produtos.</p>';
+        }
     }
 
     filterButtons.forEach(button => {
@@ -88,14 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const category = button.dataset.category;
 
             const filteredItems = category === 'all'
-                ? menuItems
-                : menuItems.filter(item => item.category === category);
+                ? allMenuItems
+                : allMenuItems.filter(item => {
+                    return item.categoria === category;
+                });
 
             displayMenuItems(filteredItems);
         });
     });
 
-    //Função para adicionar efeito de aparecer as imagens
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
 
@@ -112,5 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hiddenElements.forEach((el) => observer.observe(el));
 
-    displayMenuItems(menuItems);
+    carregarListaProduto();
+
+
 });

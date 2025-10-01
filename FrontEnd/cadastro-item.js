@@ -18,8 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function BuscarEpreencherFormulario(produtoId) {
         try {
-            const API_BASE_URL = 'http://localhost:3000';
-            const response = await fetch(`${API_BASE_URL}/api/produto/${produtoId}`);
+            const API_BASE_URL = 'http://127.0.0.1:3000';
+            const response = await fetch(`${API_BASE_URL}/api/produto/${produtoId}`, {
+                credentials: 'include'
+            });
+
+            if (response.status === 401) {
+                alert('Acesso não autorizado. Por favor, faça o login.');
+                window.location.href = 'login.html';
+                return;
+            }
 
             const produto = await response.json();
             
@@ -86,12 +94,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const method = produtoId ? 'PUT' : 'POST';
-        const url = produtoId ? `http://localhost:3000/api/produto/${produtoId}` : 'http://localhost:3000/api/produto';
+        const url = produtoId ? `http://127.0.0.1:3000/api/produto/${produtoId}` : 'http://127.0.0.1:3000/api/produto';
 
         try {
             const response = await fetch(url, {
                 method: method,
-                body: formData
+                body: formData,
+                credentials: 'include'
             });
 
             if (response.ok) {

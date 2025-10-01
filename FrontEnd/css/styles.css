@@ -5,15 +5,18 @@ html {
 }
 
 .hidden {
-  opacity: 0;
-  transform: translateY(50px); 
-  transition: all 1s ease-out; 
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
 }
 
+.menu-card{
+    overflow: hidden;
+}
 
 .show {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 :root {
@@ -154,7 +157,6 @@ body {
     text-align: center;
 }
 
-
 .container_button_lista {
     display: flex;
     flex-direction: column;
@@ -187,6 +189,13 @@ body {
     cursor: pointer;
 }
 
+.button_style::before {
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    font-size: 80px;
+    color: white;
+}
 
 .button_style:hover {
     background-color: var(--laranja-button);
@@ -214,7 +223,6 @@ body {
     justify-content: center;
     gap: 1.5rem;
     margin: 20px;
-
 }
 
 .box {
@@ -225,6 +233,7 @@ body {
     max-width: 400px;
     display: flex;
     flex-direction: column;
+    background-color: var(--branco-background);
 }
 
 .box img {
@@ -259,7 +268,10 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: var(--green-color);
+    background-image: url('../img/Vector.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     color: var(--branco-background);
     width: 100%;
     height: 400px;
@@ -277,12 +289,6 @@ body {
     margin: 0px 400px;
 }
 
-.nossa_historia_button {
-    border: none;
-    padding: 20px 40px;
-    border-radius: 10px;
-    cursor: pointer;
-}
 
 .nossa_historia_button:hover {
     background-color: #6f8a42;
@@ -309,14 +315,14 @@ body {
 .imagens_bottom_1,
 .imagens_bottom_2 {
     position: absolute;
-    width: 480px;
+    width: clamp(280px, 30vw, 480px);
     border: 15px solid white;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 10;
 }
 
 .imagens_bottom_1 {
-    top: 300px;
+    top: 350px;
     left: 5%;
     transform: rotate(-8deg);
 }
@@ -328,7 +334,7 @@ body {
 }
 
 .historia-texto-central h2 {
-
+    position: relative;
     font-size: 48px;
     font-weight: 300;
     font-style: italic;
@@ -336,6 +342,17 @@ body {
     text-align: center;
     line-height: 1.2;
     margin: 40px;
+}
+
+.historia-texto-central h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    width: 10%;
+    height: 8px;
+    background-color: var(--cor-fonte);
+
 }
 
 #menu-filters .button_style.active {
@@ -455,6 +472,7 @@ body {
     border: 2px solid #df5349;
     color: var(--branco-background);
 }
+
 
 
 @media (max-width: 1550px) {
@@ -645,4 +663,5 @@ body {
     .footer_navbar p {
         font-size: 12px;/
     }
+
 }

@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const method = produtoId ? 'PUT' : 'POST';
-        const url = produtoId ? `http://127.0.0.1:3000/api/produto/${produtoId}` : 'http://localhost:3000/api/produto';
+        const url = produtoId ? `http://127.0.0.1:3000/api/produto/${produtoId}` : 'http://127.0.0.1:3000/api/produto';
 
         try {
             const response = await fetch(url, {
